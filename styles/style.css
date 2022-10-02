@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@font-face {
+    font-family: "edo";
+    src: url(../police/edosz.ttf);
+}
+
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #f4f4f4;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 4px 31px 7px rgba(0,0,0,0.73);
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    text-transform: uppercase;
+    display: inline-block;
+    color: #202020;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+.topnav a:first-child{
+    display: block;
+    margin: 0px 0px;
+}
+.topnav h1 {
+    font-family: "edo";
+    font-size: 3.5em;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+
+    color: #202020;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    padding: 8px;
+    color: #202020;
+
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+    font-size: 2em;
+
+}
+.topnav input{
+
+    height: 25px;
+    
+}
+.topnav input::placeholder{
+    text-align: center;
+}
+main {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto;
+    min-height: 100vh;
+
+    padding: 2% 2%;
+}
+aside{
+    text-align: center;
+}
+h2,h3{
+    margin-bottom: 10px;
+}
+
+p{
+    margin-bottom: 10px;
+}
+article,section,ul{
+    padding: 2%;
+
+}
+#titre_connexion{
+    text-align: center;
+    text-decoration:underline;
+    font-size: 1em;
+}
+
+#connexion input{
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 20px;
+    
+    border: 2px  solid black;
+    text-align: center;
+    box-shadow: 0px 3px 15px -4px #000000;
+}
+#connexion input[type="submit"]{
+    background-color: #f4f4f4;
+    color:  #202020;
+}
+#nouvelles{
+    text-align: center;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+footer {
+    padding: 20px 0 10px;
+    width: 100%;
+    translate: (50% -50%);
+    background-color: #f4f4f4;
+    color: #202020;
+    text-align: center;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+footer a{
+    color: #202020;
+    text-decoration: none;
+}
+@media screen and (min-width: 1000px){
+    .topnav a{
+        font-size: 1em;
+    }
+}
+@media screen and (min-width: 2000px){
+    .topnav a{
+        font-size: 2em;
+        margin: 120px 30px 14px;
+    }
+}
+@media screen and (min-width: 3000px){
+
+    .topnav a{
+        font-size: 3em;
+        margin: 170px 30px 14px;
+    }
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 700px) {
+
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a{
+        font-size: 1em;
+
+    }
+
+    .topnav h1{
+        font-size: 30px;
+
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .topnav input{
+        display: none;
+        margin: 5px auto;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a:not(.icon) {
+        float: none;
+        display: block;
+  
+    }
+    .topnav.responsive input {
+        float: none;
+        display: block;
+    }
+}
+
+
+/* Bouton */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
