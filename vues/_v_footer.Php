@@ -22,7 +22,7 @@
             &copy; 2022 Secret du Roi<br>
             Tout droits réservés.
         </p>
-        <p>v0.0.4</p>
+        <p>v0.0.5</p>
     </footer>
     <script src="../script/script.js"></script>
 
